@@ -1,4 +1,29 @@
 package com.dev.expensetracker.services.impl;
 
-public class UserDetailsServiceImpl {
+import com.dev.expensetracker.exceptions.ResourceNotFoundException;
+import com.dev.expensetracker.repository.UserRepository;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserDetailsServiceImpl implements UserDetailsService {
+
+    private final UserRepository userRepository;
+
+    public UserDetailsServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return userRepository.findByEmail(username)
+                .orElseThrow(() -> new ResourceNotFoundException("Email not found: " + username));
+    }
+
 }
+
+
+
+

@@ -1,4 +1,10 @@
 package com.dev.expensetracker.services;
 
-public class AuthService {
+import com.dev.expensetracker.dtos.CreateUserDto;
+import com.dev.expensetracker.dtos.UserDto;
+import org.springframework.stereotype.Service;
+
+public interface AuthService {
+    UserDto register(CreateUserDto createUserDto);
+
 }

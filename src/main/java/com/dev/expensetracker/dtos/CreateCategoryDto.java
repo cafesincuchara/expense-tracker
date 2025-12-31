@@ -1,4 +1,6 @@
 package com.dev.expensetracker.dtos;
 
-public record CreateCategories() {
-}
+public record CreateCategoryDto(
+        String name,
+        String description
+) {}

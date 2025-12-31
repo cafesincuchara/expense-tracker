@@ -1,4 +1,4 @@
-package com.dev.expensetracker.entities;
+package com.dev.expensetracker.exceptions;
 
 import lombok.Getter;
 import lombok.Setter;

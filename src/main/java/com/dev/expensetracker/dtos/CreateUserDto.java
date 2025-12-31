@@ -1,6 +1,6 @@
 package com.dev.expensetracker.dtos;
 
-public record CreatedUserDto(
+public record CreateUserDto(
         String name,
         String email,
         String password

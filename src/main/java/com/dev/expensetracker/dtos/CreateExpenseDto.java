@@ -3,7 +3,7 @@ package com.dev.expensetracker.dtos;
 import java.math.BigDecimal;
 import java.util.UUID;
 
-public record CreatedExpenseDto(
+public record CreateExpenseDto(
         BigDecimal amount,
         String description,
         UUID categoryId

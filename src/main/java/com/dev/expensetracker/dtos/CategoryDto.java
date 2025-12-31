@@ -1,4 +1,11 @@
 package com.dev.expensetracker.dtos;
 
-public class CategoryDto {
+import java.util.UUID;
+
+public record CategoryDto(
+        UUID id,
+        String name,
+        String description
+
+) {
 }
