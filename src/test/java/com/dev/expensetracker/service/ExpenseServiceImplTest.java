@@ -1,12 +1,12 @@
 package com.dev.expensetracker.service;
 
-import com.dev.expensetracker.entities.Category;
-import com.dev.expensetracker.entities.Expense;
-import com.dev.expensetracker.entities.User;
-import com.dev.expensetracker.repository.CategoryRepository;
-import com.dev.expensetracker.repository.ExpenseRepository;
-import com.dev.expensetracker.repository.UserRepository;
-import com.dev.expensetracker.services.impl.ExpenseServiceImpl;
+import com.dev.expensetracker.features.category.domain.Category;
+import com.dev.expensetracker.features.expense.domain.Expense;
+import com.dev.expensetracker.features.user.domain.User;
+import com.dev.expensetracker.features.category.repository.CategoryRepository;
+import com.dev.expensetracker.features.expense.repository.ExpenseRepository;
+import com.dev.expensetracker.features.user.repository.UserRepository;
+import com.dev.expensetracker.features.expense.service.ExpenseServiceImpl;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

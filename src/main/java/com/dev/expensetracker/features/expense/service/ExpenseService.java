@@ -1,0 +1,13 @@
+package com.dev.expensetracker.features.expense.service;
+
+import com.dev.expensetracker.features.expense.domain.Expense;
+
+import java.util.List;
+import java.util.UUID;
+
+public interface ExpenseService {
+    Expense createExpense(Expense expense, UUID userId, UUID categoryId);
+    List<Expense> findAll();
+    Expense findById(UUID id);
+    void deleteById(UUID id);
+}
